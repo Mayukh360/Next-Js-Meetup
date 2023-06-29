@@ -17,7 +17,7 @@ export default function MeetupDetail() {
 export async function getStaticPaths(){
 
   return{
-    fallback:true,
+    fallback:false,
     paths:[
       {
         params:{
@@ -27,6 +27,11 @@ export async function getStaticPaths(){
       {
         params:{
           meetupId:'m2',
+        },
+      },
+      {
+        params:{
+          meetupId:'m3',
         },
       },
     ]
