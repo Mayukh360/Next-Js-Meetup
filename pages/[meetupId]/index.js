@@ -2,10 +2,15 @@ import React from "react";
 import MeetupDetails from "../../components/meetups/MeetupDetails";
 import { MongoClient } from "mongodb";
 import { ObjectId } from "mongodb";
+import Head from "next/head";
 
 export default function MeetupDetail(props) {
   return (
     <>
+    <Head>
+      <title>{props.meetupData.title}</title>
+      <meta name="description" content="This is details page for the meetup list content, visit here and see full details of particular listed meetup"/>
+    </Head>
       <MeetupDetails
         image={props.meetupData.image}
         title={props.meetupData.title}

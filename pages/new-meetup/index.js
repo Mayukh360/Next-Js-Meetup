@@ -1,6 +1,7 @@
 import React from 'react'
 import NewMeetupForm from '@/components/meetups/NewMeetupForm'
 import axios from 'axios';
+import Head from 'next/head';
 
 export default function NewMeetup() {
     async function AddMeetuphandler(enteredData){
@@ -16,6 +17,11 @@ export default function NewMeetup() {
     }
   return (
     <>
+    <Head>
+      <title>Add a new meeting</title>
+      <meta name='description' content='add you own meetups and see those meeting location on meetup page' />
+    </Head>
+    
     <NewMeetupForm onAddMeetup={AddMeetuphandler}/>
     </>
   )
