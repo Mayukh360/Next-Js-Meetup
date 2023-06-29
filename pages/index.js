@@ -47,9 +47,9 @@ export async function getStaticProps() {
   const db = client.db();
 
   const meetupsCollecton = db.collection("meetups");
-  const meetupsCursor = meetupsCollecton.find();
+  const meetupsCursor = meetupsCollecton.find(); // Find is special keyword to find all product in database
   const meetups = await meetupsCursor.toArray();
-  console.log(meetups);
+  // console.log(meetups);
 
   return {
     props: {
